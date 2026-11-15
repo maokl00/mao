@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>第二次段考英文練習題</title>
+<title>英文互動測驗</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
@@ -70,7 +70,7 @@ footer{margin-top:40px;color:var(--muted);font-size:13px}
   <div id="homeView">
     <div class="wrap">
       <header>
-        <h1>第二次段考英文練習題</h1>
+        <h1>英文互動測驗</h1>
         <p class="lead">點上方的圖示或下方的卡片，就能直接切換到該份測驗。</p>
       </header>
       <div id="list"></div>
@@ -128,6 +128,22 @@ function buildHome(){
     </section>`).join("");
   $("list").querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go));
 }
+// links like <a href="#q12"> inside an embedded quiz would otherwise reload this page in the frame:
+// scroll to the target inside the quiz instead
+function fixAnchors(f){
+  let doc; try{ doc = f.contentDocument; }catch(e){ return; }
+  if(!doc || doc.__anchorFix) return;
+  doc.__anchorFix = true;
+  doc.addEventListener("click", e=>{
+    const a = e.target.closest && e.target.closest('a[href^="#"]');
+    if(!a) return;
+    e.preventDefault();
+    const id = decodeURIComponent(a.getAttribute("href").slice(1));
+    if(!id){ f.contentWindow.scrollTo({top:0, behavior:"smooth"}); return; }
+    const el = doc.getElementById(id) || doc.getElementsByName(id)[0];
+    if(el) el.scrollIntoView({behavior:"smooth", block:"start"});
+  }, true);
+}
 let current = null;
 function show(id){
   if(!QZ[id]) id = "home";
@@ -143,7 +159,7 @@ function show(id){
   $("homeView").classList.add("hide"); $("loading").classList.remove("hide");
   const f = $("frame");
   f.classList.remove("hide");
-  f.onload = ()=>{ $("loading").classList.add("hide"); };
+  f.onload = ()=>{ $("loading").classList.add("hide"); fixAnchors(f); };
   f.srcdoc = QZ[id];
   const q = QUIZ.find(x=>x.id===id); document.title = (q.unit+" "+q.name) + "｜英文互動測驗";
 }
