@@ -142,6 +142,22 @@ function buildHome(){
     </section>`).join("");
   $("list").querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go));
 }
+// links like <a href="#q12"> inside an embedded quiz would otherwise reload this page in the frame:
+// scroll to the target inside the quiz instead
+function fixAnchors(f){
+  let doc; try{ doc = f.contentDocument; }catch(e){ return; }
+  if(!doc || doc.__anchorFix) return;
+  doc.__anchorFix = true;
+  doc.addEventListener("click", e=>{
+    const a = e.target.closest && e.target.closest('a[href^="#"]');
+    if(!a) return;
+    e.preventDefault();
+    const id = decodeURIComponent(a.getAttribute("href").slice(1));
+    if(!id){ f.contentWindow.scrollTo({top:0, behavior:"smooth"}); return; }
+    const el = doc.getElementById(id) || doc.getElementsByName(id)[0];
+    if(el) el.scrollIntoView({behavior:"smooth", block:"start"});
+  }, true);
+}
 let current = null;
 function show(id){
   if(!QZ[id]) id = "home";
@@ -157,7 +173,7 @@ function show(id){
   $("homeView").classList.add("hide"); $("loading").classList.remove("hide");
   const f = $("frame");
   f.classList.remove("hide");
-  f.onload = ()=>{ $("loading").classList.add("hide"); };
+  f.onload = ()=>{ $("loading").classList.add("hide"); fixAnchors(f); };
   f.srcdoc = QZ[id];
   const q = QUIZ.find(x=>x.id===id); document.title = q.name + "｜社會科互動測驗";
 }
@@ -171,4 +187,3 @@ show(location.hash.slice(1)||"home");
 </script>
 </body>
 </html>
-
