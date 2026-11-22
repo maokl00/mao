@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>八年級歷史｜第二次段考複習講義（單元3 宋元・單元4 明清）</title>
+<style>
+:root{
+  --bg:#fbfaf7; --fg:#222; --muted:#666; --card:#fff; --line:#e3ded3; --accent:#8a3b2a; --accent2:#2a5d8a;
+  --y:#fff176; --g:#b9f6ca; --p:#ffc1d9; --b:#b3e5fc; --o:#ffd8a8;
+  --fs:17px;
+}
+body.dark{
+  --bg:#17181b; --fg:#e8e6e1; --muted:#a0a0a0; --card:#202226; --line:#33363c; --accent:#e08a6f; --accent2:#7fb6e6;
+  --y:#8a7a00; --g:#1d7a45; --p:#9c3a65; --b:#1f6c8e; --o:#9a5c1a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--fg);font:var(--fs)/1.85 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+/* toolbar */
+#toolbar{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);padding:8px 12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+#toolbar .grp{display:flex;gap:6px;align-items:center}
+#toolbar .lbl{font-size:13px;color:var(--muted)}
+.sw{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);cursor:pointer;padding:0;position:relative}
+.sw[data-c=y]{background:var(--y)} .sw[data-c=g]{background:var(--g)} .sw[data-c=p]{background:var(--p)} .sw[data-c=b]{background:var(--b)} .sw[data-c=o]{background:var(--o)}
+.sw.on{outline:3px solid var(--accent);outline-offset:2px}
+.btn{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:8px;padding:6px 10px;font:inherit;font-size:14px;cursor:pointer}
+.btn:hover{border-color:var(--accent)}
+.btn.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+#hint{font-size:13px;color:var(--muted);flex:1 1 220px}
+/* layout */
+#wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:230px minmax(0,1fr);gap:28px;padding:20px 16px 80px}
+#toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;line-height:1.5;border-right:1px solid var(--line);padding-right:12px}
+#toc b{display:block;margin-bottom:6px;color:var(--muted)}
+#toc a{display:block;padding:5px 6px;color:var(--fg);text-decoration:none;border-radius:6px}
+#toc a:hover{background:var(--line)}
+#content{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 30px 40px}
+h1{font-size:1.55em;line-height:1.4;margin:.4em 0 .1em;color:var(--accent)}
+.byline{color:var(--muted);font-size:.85em;margin-bottom:1em}
+h2{font-size:1.3em;margin:2.2em 0 .6em;padding:.2em .6em;border-left:6px solid var(--accent);background:rgba(138,59,42,.07);border-radius:0 8px 8px 0}
+h3{font-size:1.08em;margin:1.6em 0 .4em;color:var(--accent2)}
+p{margin:.5em 0}
+ul,ol{padding-left:1.4em;margin:.4em 0}
+li{margin:.2em 0}
+li.sub{margin-left:1.4em;list-style:circle}
+blockquote{margin:.8em 0;padding:.4em 1em;border-left:4px solid var(--accent2);background:rgba(42,93,138,.07);border-radius:0 8px 8px 0}
+.tw{overflow-x:auto;margin:.8em 0}
+table{border-collapse:collapse;width:100%;font-size:.92em;min-width:520px}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+th{background:rgba(0,0,0,.05)}
+body.dark th{background:rgba(255,255,255,.06)}
+.note{font-size:.88em;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:10px;padding:6px 14px;margin:1em 0}
+summary{cursor:pointer;font-weight:700;color:var(--accent)}
+/* highlight */
+mark.hl{color:inherit;border-radius:3px;padding:0 1px}
+mark.hl-y{background:var(--y)} mark.hl-g{background:var(--g)} mark.hl-p{background:var(--p)} mark.hl-b{background:var(--b)} mark.hl-o{background:var(--o)}
+body.tool #content{cursor:text}
+@media (max-width:860px){
+  #wrap{grid-template-columns:1fr}
+  #toc{display:none}
+  #content{padding:8px 16px 32px}
+}
+@media print{
+  #toolbar,#toc{display:none}
+  #wrap{display:block;padding:0}
+  #content{border:0;padding:0}
+  body{background:#fff;color:#000}
+  mark.hl{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  details{border:0} details>summary{display:none}
+  details[open] *,details *{display:revert}
+}
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <div class="grp">
+    <span class="lbl">螢光筆</span>
+    <button class="sw" data-c="y" title="黃：必背重點"></button>
+    <button class="sw" data-c="g" title="綠：人名・名詞"></button>
+    <button class="sw" data-c="p" title="粉：易錯・易混淆"></button>
+    <button class="sw" data-c="b" title="藍：年代・數字"></button>
+    <button class="sw" data-c="o" title="橘：自訂"></button>
+    <button class="btn" id="eraser" title="選取文字後套用，可擦除標註">橡皮擦</button>
+  </div>
+  <div class="grp">
+    <button class="btn" id="undo" title="復原上一個標註動作">復原</button>
+    <button class="btn" id="clear">清除全部</button>
+    <button class="btn" id="export">匯出</button>
+    <button class="btn" id="import">匯入</button>
+  </div>
+  <div class="grp">
+    <button class="btn" id="fminus">A−</button>
+    <button class="btn" id="fplus">A＋</button>
+    <button class="btn" id="dark">深色</button>
+    <button class="btn" onclick="window.print()">列印</button>
+  </div>
+  <div id="hint">用法：先點一個顏色，再用滑鼠或手指選取文字，就會自動上色；再點一次同色可關閉。</div>
+  <input type="file" id="file" accept="application/json" hidden>
+</div>
+
+<div id="wrap">
+<nav id="toc"><b>目錄</b></nav>
+
+<main id="content">
+<h1>八年級歷史｜第二次段考複習講義<br>（單元3 宋元、單元4 明清）</h1>
+<div class="byline">範圍：課本 P.104–129　・　顏色：黃＝必背　綠＝人名名詞　粉＝易錯　藍＝年代數字</div>
+
+<h2>考前總覽</h2>
+<p>本次範圍為單元3「宋元時期的國際互動與交流」（課本 P.104–115）與單元4「明清時期東亞世界的變遷」（P.116–129）。兩單元的共同主軸是：<strong>政權如何更替 → 國際關係如何運作（平等外交／朝貢） → 商貿如何帶動文化交流</strong>。</p>
+
+<h3>兩單元一句話主線</h3>
+<div class="tw"><table>
+<tr><th>單元</th><th>政權脈絡</th><th>國際關係</th><th>商貿</th><th>文化交流</th></tr>
+<tr><td>3 宋元</td><td>遼、北宋並立 → 金滅北宋、南宋對峙 → 蒙古崛起，元滅南宋</td><td>澶淵之盟：平等外交；蒙古帝國：跨歐亞國際新秩序</td><td>城市繁榮、市舶司、紙幣（交子、寶鈔）</td><td>理學、印刷術／火藥／指南針、伊斯蘭文化傳入</td></tr>
+<tr><td>4 明清</td><td>明（漢人）→ 清（滿洲人，少數民族統治多元帝國）</td><td>朝貢體制（天朝觀）：朝鮮、琉球、暹羅</td><td>海禁與倭寇、白銀流入、新作物傳入</td><td>天主教傳教士（利瑪竇）、禮儀之爭、日本鎖國與蘭學</td></tr>
+</table></div>
+
+<h3>必背時間軸</h3>
+<div class="tw"><table>
+<tr><th>年代</th><th>事件</th><th>歸屬</th></tr>
+<tr><td>947</td><td>契丹以「大遼」為國號</td><td>單元3</td></tr>
+<tr><td>960</td><td>趙匡胤建立宋朝（北宋，定都汴京）</td><td>單元3</td></tr>
+<tr><td>1005</td><td>宋、遼簽訂「澶淵之盟」</td><td>單元3</td></tr>
+<tr><td>1115</td><td>女真人建國，國號「大金」</td><td>單元3</td></tr>
+<tr><td>1127</td><td>靖康之禍，北宋亡；宋室南遷，建立南宋（定都臨安）</td><td>單元3</td></tr>
+<tr><td>1206</td><td>鐵木真建立蒙古國，尊稱「成吉思汗」</td><td>單元3</td></tr>
+<tr><td>1219</td><td>蒙古首次西征</td><td>單元3</td></tr>
+<tr><td>1271</td><td>忽必烈以「大元」為國號</td><td>單元3</td></tr>
+<tr><td>1279</td><td>元滅南宋，結束多政權並立的局面</td><td>單元3</td></tr>
+<tr><td>1368</td><td>朱元璋建立「大明」，元朝結束在中國的統治</td><td>單元4</td></tr>
+<tr><td>1371</td><td>明朝實施「海禁」</td><td>單元4</td></tr>
+<tr><td>1405</td><td>鄭和首次下西洋（明成祖派遣）</td><td>單元4</td></tr>
+<tr><td>1582</td><td>耶穌會的利瑪竇抵達中國傳教</td><td>單元4</td></tr>
+<tr><td>1633</td><td>日本實施「鎖國」</td><td>單元4</td></tr>
+<tr><td>1636</td><td>滿洲人建立「大清」</td><td>單元4</td></tr>
+<tr><td>1644</td><td>明朝滅亡（李自成攻陷北京），清軍占領北京</td><td>單元4</td></tr>
+<tr><td>1683</td><td>清朝擊敗臺灣鄭氏（康熙22年）</td><td>單元4</td></tr>
+<tr><td>1692</td><td>康熙皇帝頒布「容教令」</td><td>單元4</td></tr>
+<tr><td>1723</td><td>雍正皇帝下令全面禁教（課本時間軸；P.129 資料四為1724年口諭）</td><td>單元4</td></tr>
+</table></div>
+
+<h3>十個最容易考的關鍵詞</h3>
+<p>澶淵之盟、靖康之禍、四等人制、市舶司、交子與寶鈔、理學（朱熹《四書集注》）、朝貢體制、海禁與倭寇、白銀、禮儀之爭／鎖國與蘭學。</p>
+
+<h2>單元3-1 宋元國際互動（一）：遼、北宋、金、南宋</h2>
+<p>10世紀初唐朝滅亡後，北方草原上的各民族先後建立遼、金、元等政權，與南方的宋朝互動，形成多元的國際秩序。</p>
+
+<h3>一、遼與北宋的並立</h3>
+<ul>
+<li><strong>契丹人</strong>：原居中國東北，唐亡後在北方建立政權，取得<strong>燕雲十六州</strong>（今河北、山西北部），勢力得以伸入長城以南，國號「<strong>大遼</strong>」。</li>
+<li><strong>北宋建立</strong>：10世紀中葉，趙匡胤建立宋朝（宋太祖），定都<strong>汴京</strong>（今河南開封）。宋太祖有鑒於唐末武將擁兵自重，改以<strong>文人取代武將</strong>，壓制武將權力。</li>
+<li><strong>北宋困境</strong>：重文輕武的文人政治，加上北方無險可守，難以應付強敵環伺的局面。</li>
+<li><strong>澶淵之盟</strong>（宋真宗時，1005）：宋遼先有戰爭，後訂盟約。</li>
+<li class="sub">劃定國界。</li>
+<li class="sub">宋每年輸遼銀十萬兩、絹二十萬匹（稱為「歲幣」）。</li>
+<li class="sub">雙方君主以<strong>兄弟相稱</strong>，建立<strong>平等的外交關係</strong>。</li>
+<li class="sub">影響：維持百餘年和平，兩國減輕邊防壓力，能致力內部發展。</li>
+</ul>
+<blockquote><strong>想一想（P.105 單元開頭）</strong>：兩種看法<br>
+看法A：宋無法以武力統一，只能給歲幣換和平，「終究不是長久之計」（偏批評）。<br>
+看法B：議和後不必受戰爭威脅，還能與契丹貿易大賺一筆，「生活在太平盛世真幸運」（偏肯定）。<br>
+考點：同一事件，不同立場（軍事安全 vs. 經濟生活）會有不同評價。</blockquote>
+
+<h3>二、金與南宋的對峙</h3>
+<ul>
+<li><strong>女真人</strong>：原居中國東北，受遼統治；12世紀初趁遼衰落起兵抗遼，建國號「<strong>大金</strong>」，勢力迅速壯大。</li>
+<li><strong>宋金聯合滅遼</strong>（圖①）→ 金隨後<strong>南下攻宋</strong>（圖②）。</li>
+<li><strong>靖康之禍（1127）</strong>：金攻陷汴京，俘虜北宋皇帝，北宋滅亡。</li>
+<li><strong>南宋建立</strong>（圖③）：部分皇室南遷，重建政權，定都<strong>臨安</strong>（今浙江杭州），史稱「南宋」。此後宋金戰和不定，<strong>長期南北對峙</strong>。</li>
+</ul>
+<div class="tw"><table>
+<tr><th>圖號</th><th>局勢</th><th>對應事件</th></tr>
+<tr><td>圖片一</td><td>遼與北宋並立</td><td>澶淵之盟時期（平等外交）</td></tr>
+<tr><td>圖片二</td><td>金、北宋聯合滅遼</td><td>宋金合作</td></tr>
+<tr><td>圖片三</td><td>金滅北宋</td><td>靖康之禍（岳飛「靖康恥」指此事）</td></tr>
+<tr><td>圖片四</td><td>金、南宋對峙</td><td>宋室南遷後</td></tr>
+<tr><td>圖片五</td><td>蒙古、南宋聯合滅金</td><td>蒙古崛起</td></tr>
+<tr><td>圖片六</td><td>元滅南宋</td><td>1279，結束多政權並立</td></tr>
+</table></div>
+<p><strong>補給站・來挑戰重點</strong>：</p>
+<ul>
+<li>文人所說的「東京」＝<strong>汴京</strong>（今開封）。</li>
+<li>導致文人離開東京的「兵禍」＝<strong>靖康之禍</strong>。</li>
+<li>岳飛《滿江紅》「靖康恥」＝圖片三；岳飛是<strong>南宋</strong>臣民。</li>
+</ul>
+
+<h2>單元3-1（二）蒙古的征服與元朝統治</h2>
+<p>蒙古先建立橫跨歐亞的帝國，再由忽必烈建立元朝滅南宋，以「四等人」區別族群，並形成跨族群、跨疆界的國際新秩序。</p>
+
+<h3>1. 蒙古的崛起與擴張</h3>
+<ul>
+<li>蒙古人原居中國北方；<strong>13世紀初</strong>鐵木真統一蒙古各部，建立蒙古國，被尊為「<strong>成吉思汗</strong>」。</li>
+<li>成吉思汗與繼任者積極向西、向南擴張：發動<strong>三次大規模西征</strong>，打造橫跨歐、亞兩洲的龐大帝國，並<strong>分封四大汗國</strong>（如伊兒汗國、金帳汗國等）。</li>
+<li>南下方面：與南宋合作滅金，控制黃河流域。</li>
+</ul>
+
+<h3>2. 元朝的統治</h3>
+<ul>
+<li>13世紀中葉，鐵木真之孫<strong>忽必烈</strong>採用皇帝稱號，定都<strong>大都</strong>（今北京），建國號「<strong>大元</strong>」（元世祖，1271）。</li>
+<li>隨後舉兵南征，<strong>1279 年滅南宋</strong>，結束中國數個政權並存的局面。</li>
+<li>元朝名義上為蒙古帝國的共主，但各汗國實際各自發展，後來逐漸衰落，蒙古帝國逐漸瓦解。</li>
+<li>元朝晚期：遇水旱災荒，各地先後起兵反元；<strong>朱元璋</strong>掃平群雄、派兵北上攻入大都，蒙古統治者退回草原，結束在中國的統治。</li>
+</ul>
+
+<h3>元朝「四等人」（少數民族主中國，為鞏固統治而分類）</h3>
+<div class="tw"><table>
+<tr><th>等級</th><th>範圍</th><th>地位與特徵</th></tr>
+<tr><td>蒙古人</td><td>蒙古族</td><td>地位最高，擔任要職，享有較多特權</td></tr>
+<tr><td>色目人</td><td>西域等地各族群</td><td>地位僅次蒙古人，多負責理財等事務</td></tr>
+<tr><td>漢人</td><td>原金國統治下的人民</td><td>任官多當副手</td></tr>
+<tr><td>南人</td><td>原南宋統治下的人民</td><td>任官機會最少，地位最低</td></tr>
+</table></div>
+<p>注意：四等制<strong>並未明確寫入法律</strong>，卻在無形中成為掌權者決策、頒布法律時的考量重點。</p>
+
+<h3>3. 蒙古統治下的國際新秩序</h3>
+<ul>
+<li>鼎盛時期統治歐亞大陸前所未有的廣闊帝國，形成跨越族群與疆界的國際新秩序。</li>
+<li>東西方之間的<strong>人員、物品、資訊</strong>流動更活躍，促進商貿與文化交流。</li>
+<li>證據（圖 2-3-10、11）：伊兒汗國宮廷中有人穿著不同族群服飾、使用中國風格的瓷器；元世祖像（圖2-3-11）則反映蒙古統治者受到中國文化的影響。</li>
+</ul>
+
+<h2>單元3-2 宋元時期的商貿發展</h2>
+<p>宋元各民族頻繁接觸，帶動國內外商貿活動蓬勃發展，進而形成龐大的跨國貿易網絡。考點分三塊：<strong>城市、對外貿易、紙幣</strong>。</p>
+
+<h3>一、城市的發展</h3>
+<ul>
+<li>原因：宋代以後人口增加、經濟繁榮 → 交通要道出現許多新興城市，汴京、臨安等大城更聚集眾多人口，店舖林立。</li>
+<li>政府取消商家營業<strong>時間、地點</strong>的限制，出現「<strong>夜市</strong>」等多元商業模式。</li>
+<li>圖證：《清明上河圖》（北宋汴京）可見酒樓、旅店、香料鋪、診所等店家。</li>
+<li>來挑戰：香料主要產地為<strong>東南亞</strong>；汴京香料鋪適合說明<strong>海上商貿活動興盛</strong>。</li>
+</ul>
+
+<h3>二、對外貿易的興盛</h3>
+<div class="tw"><table>
+<tr><th>面向</th><th>重點</th></tr>
+<tr><td>陸路</td><td>宋與遼、金、西夏等國的<strong>邊界貿易</strong>頻繁。蒙古建立橫跨歐亞的帝國，廣設<strong>驛站</strong>，陸上交通空前通暢，有助東西商貿往來。</td></tr>
+<tr><td>海路</td><td>唐代已有許多阿拉伯地區穆斯林商人經海路買賣來華；宋元海外貿易更發達，許多中國商人也前往海外貿易。</td></tr>
+<tr><td>港口與制度</td><td>宋元在<strong>廣州、泉州</strong>等主要港口設<strong>市舶司</strong>；貿易稅收成為政府重要財源；<strong>泉州</strong>是當時著名的世界大港。</td></tr>
+</table></div>
+<p><strong>補給站名詞</strong></p>
+<ul>
+<li><strong>驛站</strong>：供來往的官員、使節與商旅中途換馬或休息的處所，對訊息傳遞、商業與文化交流有助益。</li>
+<li><strong>市舶司</strong>：唐代已派官員管理海外貿易；至宋代正式設立專責機構，管理進出口商務、徵稅等，類似現在的海關。</li>
+</ul>
+<p>元朝對外貿易路線（圖2-3-13）：陸上可通往西亞、東歐；海上有多條航線，可通往日本、東南亞、印度、阿拉伯等地區。</p>
+
+<h3>三、紙幣的應用</h3>
+<ul>
+<li>商業發達，貨幣需求增加，但<strong>銅錢笨重</strong>，不利於商旅攜帶與大筆交易 → 紙幣逐漸廣泛使用。</li>
+</ul>
+<div class="tw"><table>
+<tr><th></th><th>北宋「交子」</th><th>元代「寶鈔」</th></tr>
+<tr><td>特色</td><td>發行於四川；有使用期限與地域限制</td><td>官方發行，可流通全國各地，不限定期限</td></tr>
+<tr><td>防偽</td><td>偽造者處死（圖中標示）</td><td>偽造者處死（圖中標示）</td></tr>
+</table></div>
+<p class="note">照片文字較模糊處：交子、寶鈔的細部特色，請對照課本 P.111 圖 2-3-14 確認。</p>
+
+<h2>單元3-3 宋元時期的文化交流</h2>
+<p>宋元的學術與科技都有重大成就，而中外頻繁往來也促進了文化交流。考點是：<strong>理學、三大科技、伊斯蘭文化傳入</strong>。</p>
+
+<h3>1. 學術發展：理學</h3>
+<ul>
+<li>宋代學者在<strong>儒家</strong>學說的基礎上，融入當時流行的<strong>佛教</strong>等思想，形成「<strong>理學</strong>」。</li>
+<li><strong>朱熹</strong>（南宋，1130–1200）是理學的集大成者，著《<strong>四書集注</strong>》（《論語》《孟子》《大學》《中庸》的注解）。</li>
+<li>《四書集注》自<strong>元代</strong>起被官方訂為科舉考試的定本 → 進一步擴大理學影響力。</li>
+<li>理學日後傳播到<strong>朝鮮、日本</strong>等東亞各國，受當地統治者推崇。</li>
+</ul>
+
+<h3>2. 科技成就：印刷術、火藥、指南針</h3>
+<div class="tw"><table>
+<tr><th>發明</th><th>宋元發展</th><th>影響與傳播</th></tr>
+<tr><td>印刷術</td><td>宋代大為興盛；主流為<strong>雕版印刷</strong>；北宋<strong>畢昇</strong>又發明<strong>活字印刷</strong>，使字塊可重新組合</td><td>有助於教育與文化發展</td></tr>
+<tr><td>火藥</td><td>宋元戰爭頻繁，火藥被廣泛用於軍事，改變戰爭型態</td><td>因<strong>蒙古西征</strong>傳入阿拉伯世界，再輾轉傳入歐洲</td></tr>
+<tr><td>指南針</td><td>宋代改良製作技術，廣泛用在<strong>航海</strong></td><td>經<strong>阿拉伯商人</strong>輾轉傳入歐洲，有助於日後<strong>新航路</strong>的發展</td></tr>
+</table></div>
+
+<h3>3. 文化交流：伊斯蘭文化的影響</h3>
+<ul>
+<li>宋代貿易繁盛，許多<strong>穆斯林商人</strong>前往中國定居 → 促進<strong>伊斯蘭教</strong>的傳播。</li>
+<li>蒙古建立橫跨歐亞的大帝國後，東西交通更便利，許多來自西方的穆斯林學者、商人紛紛前往中國，傳入<strong>天文學（曆學）、數學</strong>等知識。</li>
+<li>《元史》記載來華穆斯林學者曾製作西域天文儀器（如天球儀）。</li>
+</ul>
+
+<h3>課後閱讀：珍珠在蒙古帝國（P.114–115）</h3>
+<p>主題是「從珍珠看蒙古帝國的貿易網絡」。</p>
+<ul>
+<li>蒙古人喜愛珍珠，但珍珠多產自南方海域（如南亞、東南亞、波斯灣），作為北方草原民族的蒙古人需要透過外來管道取得：除掠奪外，主要是<strong>貿易</strong>。</li>
+<li><strong>穆斯林商人</strong>與蒙古統治者合作，任用他們管理財政與商務；忽必烈與西亞伊兒汗國建立聯繫，海上、陸上交通連成一體，形成「<strong>世界通商圈</strong>」。</li>
+<li>忽必烈對<strong>東南亞</strong>發動遠征，主要目的是<strong>拓展商業網絡、獲取利益</strong>，而不只是征服。</li>
+<li>牛刀小試答案：作者希望藉珍珠討論的議題＝<strong>蒙古帝國的貿易網絡</strong>；穆斯林參與遠征的原因＝<strong>拓展商業網絡、提升獲利</strong>。</li>
+</ul>
+
+<h2>單元4-1 明清時期的東亞政局</h2>
+<p>明清兩代的重點是：<strong>政權如何更替（元→明→清）</strong>，以及中國如何透過<strong>朝貢體制</strong>與東亞各國互動。</p>
+
+<h3>一、中國的政治變遷</h3>
+<p><strong>明朝</strong></p>
+<ul>
+<li>14世紀中葉，朱元璋打敗元末群雄，建立「大明」，定都<strong>應天</strong>（今江蘇南京），是為明太祖。</li>
+<li>蒙古退居長城以北後，仍是明朝的勁敵。明成祖為防備蒙古，遷都<strong>順天</strong>（今北京）；直到明代中期才與蒙古議和。</li>
+<li>明代晚期：政府行政管理日漸失序，國力衰退；東北的<strong>滿洲人</strong>崛起建立「大清」，積極進犯明朝；明朝國內又因連年天災、政府未能妥善救濟，導致各地<strong>民變</strong>。</li>
+<li>17世紀中，以<strong>李自成</strong>為首的民變勢力攻陷北京，<strong>明朝滅亡</strong>（1644）。</li>
+<li>補給站：滿洲人＝女真族在明晚再崛起後改稱「滿洲」；「寇」指實施暴行或劫掠的盜賊。</li>
+<li><strong>想一想</strong>：稱「流寇」較偏負面、站在政府立場，視為盜賊；稱「民變」較中性，視為人民因生活困頓而反抗。</li>
+</ul>
+<p><strong>清朝</strong></p>
+<ul>
+<li>滿洲人趁明末動盪，派兵南下、進占北京（其後逐步消滅反抗勢力，<strong>1683 擊敗臺灣鄭氏</strong>——鄭成功建立的「反清復明」基地，臺灣納入清朝版圖）。</li>
+<li>清朝相繼將<strong>蒙古、新疆、西藏</strong>納入版圖，康熙、雍正、乾隆三朝國勢達極盛（圖 2-4-4 盛清疆域）。</li>
+<li>滿洲人為<strong>少數民族</strong>，統治廣大、民族眾多的帝國，採<strong>多元統治策略</strong>：</li>
+</ul>
+<div class="tw"><table>
+<tr><th>對象</th><th>策略</th></tr>
+<tr><td>漢人（高壓）</td><td>大興<strong>文字獄</strong>；嚴令依滿洲舊俗<strong>薙髮留辮</strong>以示臣服</td></tr>
+<tr><td>漢人士人（懷柔）</td><td>沿用<strong>科舉取士</strong>，籠絡士人</td></tr>
+<tr><td>邊境蒙古、西藏</td><td>以<strong>聯姻</strong>或<strong>宗教</strong>等方式強化控制</td></tr>
+</table></div>
+<ul>
+<li><strong>文字獄</strong>：統治者以文字觸犯政治禁忌為藉口，羅織罪名、整肅臣民，部分案件牽連眾多、刑罰嚴酷，對人們施加巨大心理壓力。</li>
+</ul>
+
+<h3>二、東亞的國際關係：朝貢體制</h3>
+<ul>
+<li>明朝建國後以「<strong>天朝</strong>」自居（以中國為中心的世界觀），要求周邊國家<strong>接受冊封、定期派使者朝貢</strong>，藉此表達臣服之意。</li>
+<li>外國使節團在朝貢過程中，也能在中國官方監督下進行貿易，即「<strong>朝貢貿易</strong>」。中國的「回賜」通常豐厚，重點在彰顯天朝。</li>
+<li>15世紀初明成祖派<strong>鄭和</strong>率龐大船隊出使「西洋」（今東南亞、印度洋一帶），目的：<strong>展現中國富強、提升海外聲威</strong>。東南亞各國眼見與中國通商有利可圖，紛紛派使朝貢，使朝貢體制更穩固。</li>
+<li>清朝前期仍沿用朝貢體制。</li>
+</ul>
+<div class="tw"><table>
+<tr><th>國家</th><th>重點事件</th></tr>
+<tr><td>① 朝鮮</td><td>16世紀末，日本意圖向外擴張、攻打朝鮮；明朝為維護北方國防安全，派兵共同擊退日軍。滿洲崛起後，朝鮮亦向其朝貢，持續到清末。</td></tr>
+<tr><td>② 琉球</td><td>17世紀初日本入侵琉球；此後琉球表面上維持獨立，但須同時向中、日朝貢，進入「<strong>中日二屬時期</strong>」，成為19世紀晚期<strong>牡丹社事件</strong>的遠因。</td></tr>
+<tr><td>③ 暹羅（今泰國）</td><td>明嘉靖年間曾派使朝貢；途中大象死亡，使者取下象牙、象尾作為證明；皇帝雖未得大象，仍嘉許並給予價值遠高於貢品的賞賜。</td></tr>
+</table></div>
+<blockquote>來挑戰（暹羅例）：使節團希望前往中國是與明朝建立<strong>朝貢關係</strong>（非平等關係）。皇帝更重視的是<strong>「政治上的秩序」</strong>，因為賞賜遠高於貢品，重點在彰顯天朝大度與臣服的態度，而非經濟利益。</blockquote>
+
+<h2>單元4-2 明清時期的商貿發展</h2>
+<p>明清商貿的發展脈絡是：<strong>海禁→倭寇與海商走私→歐洲人東來、局部鬆綁→白銀流入中國、形成世界商貿網絡→新作物傳入、人口成長</strong>。</p>
+
+<h3>一、東亞海商的活動</h3>
+<ul>
+<li>明初：為防範「<strong>倭寇</strong>」侵擾，實施<strong>海禁</strong>（課本時間軸：1371）；官方主持的「<strong>朝貢貿易</strong>」成為此時唯一合法的海上貿易管道。</li>
+<li>但許多沿海居民照樣違禁出海走私，逐漸集結成配備武裝的<strong>海上貿易集團</strong>（《倭寇圖卷》可見倭寇與官兵對抗）。</li>
+<li>16世紀：歐洲人陸續東來，並在中國沿海與海商貿易。明朝為將沿海貿易納入官方管理、緩解海防壓力，<strong>局部鬆綁海禁</strong>。海商積極前往各地貿易，海上商業日益繁盛。</li>
+<li>補給站：<strong>倭寇</strong>最初指日本海盜，16世紀後轉為以<strong>漢人</strong>為主；有人視為海盜，也有學者稱「海商」。</li>
+<li>跨連結：宋元中國與日本、東南亞貿易興盛，明初雖海禁，但沿海居民早已習慣出海經商，因此仍常違禁出海。</li>
+</ul>
+
+<h3>二、世界商貿網絡的出現</h3>
+<div class="tw"><table>
+<tr><th>步驟</th><th>內容</th></tr>
+<tr><td>① 新航路</td><td>歐洲人開闢新航路後，陸續在<strong>東南亞</strong>建立據點，發展與中國、日本的貿易（圖中可見澳門、馬尼拉、巴達維亞等）</td></tr>
+<tr><td>② 白銀需求</td><td>中國對<strong>白銀</strong>有強烈需求（幣制：明初紙幣過度發行而貶值，缺乏大額交易媒介，加上本土銀礦不足，需自境外取得）</td></tr>
+<tr><td>③ 貿易互換</td><td>歐洲商人以<strong>日本及美洲</strong>出產的白銀，換取中國的<strong>瓷器、絲綢</strong>等商品，再運銷世界各地</td></tr>
+<tr><td>④ 結果</td><td>形成跨越地區的<strong>世界商貿網絡</strong>；大量海外白銀流入，帶動中國經濟成長</td></tr>
+</table></div>
+<ul>
+<li><strong>新作物</strong>：原產於美洲的<strong>番薯、玉米、馬鈴薯</strong>等傳入歐、亞各地。耐旱、耐瘠、單位產量較高，因而促進東亞各地的<strong>人口成長</strong>。</li>
+<li>圖 2-4-10（17世紀的荷蘭靜物畫）：可見中國瓷器等東方商品已成為歐洲人生活中的常見物品。</li>
+</ul>
+<p>記憶口訣：<strong>歐洲買的是瓷器絲綢，中國收的是白銀。</strong></p>
+
+<h2>單元4-3 明清時期的文化交流</h2>
+<p>16世紀起，許多傳教士隨歐洲商人來到東亞，在中國、日本宣教，也帶動文化交流。兩國的結局不同：<strong>中國先容後禁（禮儀之爭→禁教），日本鎖國但透過荷蘭學習（蘭學）</strong>。</p>
+
+<h3>一、中國與歐洲的文化交流</h3>
+<ul>
+<li><strong>利瑪竇</strong>（耶穌會傳教士，1552–1610）：尊重中國傳統，<strong>允許信徒祭拜祖先與孔子</strong>；以傳播西方科學知識作為傳教手段，吸引部分士人，奠定天主教在華發展基礎。</li>
+<li>與<strong>徐光啟</strong>合譯《幾何原本》（圖 2-4-11）。</li>
+<li>西學東漸：數學、地理學、天文學、火炮等傳入中國；中國的典籍、繪畫、園林建築等也傳至歐洲。</li>
+<li>《<strong>坤輿萬國全圖</strong>》（圖 2-4-12）：利瑪竇結合中西地理知識繪製的世界地圖；課本圖為1708年的日本彩色摹本。</li>
+<li><strong>禮儀之爭</strong>：天主教與中國傳統文化有歧異，引起部分士人疑慮。清康熙晚期，羅馬教會認為中國傳統祭祀與天主教教義衝突，禁止教徒祭祖、祀孔，引發「禮儀之爭」。<strong>雍正</strong>即位後，全面禁止傳教，大量傳教士被逐出中國。</li>
+</ul>
+
+<h3>二、日本與歐洲的文化交流</h3>
+<ul>
+<li>歐洲商人與傳教士也前往日本，但因天主教與當地傳統文化差異，多次引發衝突、造成社會不安。</li>
+<li>17世紀中期，日本統治者宣布禁教、驅逐傳教士，並限制外國商人活動，<strong>僅允許荷蘭人與中國人至長崎貿易</strong>，稱為「<strong>鎖國</strong>」（課本時間軸：1633）。</li>
+<li>此後日本學者以<strong>荷蘭語</strong>為媒介，積極吸收西方知識與技術，形成「<strong>蘭學</strong>」。</li>
+<li>來挑戰：杉田玄白體認到西方解剖學的精確後，將外文書籍翻譯成《解體新書》；他參考的外文著作最可能是用<strong>荷蘭文</strong>撰寫。</li>
+<li>長崎「<strong>出島</strong>」：鎖國時期荷蘭人居住與貿易的地點（圖 2-4-13、14）；荷蘭人發明望遠鏡後，日本少女也用望遠鏡賞花。</li>
+</ul>
+
+<h3>中日結局對照</h3>
+<div class="tw"><table>
+<tr><th></th><th>中國</th><th>日本</th></tr>
+<tr><td>初期</td><td>利瑪竇允許祭祖、傳播科學，天主教穩步發展</td><td>傳教士與商人進入，多次引發衝突</td></tr>
+<tr><td>轉折</td><td>禮儀之爭（清康熙晚期）→ 雍正禁教</td><td>17世紀中期禁教、鎖國</td></tr>
+<tr><td>後果</td><td>傳教受阻，中西交流不完全中斷</td><td>僅荷、中到長崎貿易，藉荷語發展「蘭學」</td></tr>
+</table></div>
+
+<h3>補充閱讀 1：瓷器與中西交流（P.126 實作練習）</h3>
+<ul>
+<li>16世紀起中國瓷器大量出現在歐洲；葡萄牙人抵達澳門後的三百年間，中國至少出口三億件瓷器至歐洲。</li>
+<li>中國工匠為配合歐洲客戶需求，繪製帶有<strong>歐洲風格</strong>的圖樣（如荷蘭紋章瓷盤），是中西文化交流的具體例證。</li>
+<li>練習題：歐洲人主要以<strong>白銀</strong>換取中國的瓷器。</li>
+</ul>
+
+<h3>補充閱讀 2：從朝鮮使節的紀錄看中國明清易代（P.127）</h3>
+<ul>
+<li>14世紀末李成桂建立「朝鮮」，沿用明朝制度、推行儒學、實施科舉，並每年定期派使節到北京。使節出使稱「<strong>朝天</strong>」或「<strong>燕行</strong>」。</li>
+<li>使節任務：<strong>維繫兩國友好關係、收集中國情報、買回書籍繪畫等</strong>。</li>
+<li>1644 年明清易代後，朝鮮仍向清朝朝貢，卻在心態上不認同滿清，強調明朝衣冠才是中華文化象徵。</li>
+<li>「小中華」思想：18世紀朝鮮學者稱清朝為「胡人」，認為「今日之天下，中華的制度只保存在我國」，朝鮮才是中華文化的繼承者。</li>
+<li>牛刀小試答案：明清易代讓朝鮮認為滿清是夷狄、自己才是中華文化正統。</li>
+</ul>
+
+<h2>議題探究：明末清初的天主教與中國文化（P.128–129）</h2>
+<p>四則史料呈現「支持與反對」兩種立場，考試常問：<strong>資料作者身分、立場、理由</strong>。</p>
+<div class="tw"><table>
+<tr><th>資料</th><th>年代與作者</th><th>立場</th><th>理由重點</th></tr>
+<tr><td>一</td><td>1616 明朝官員沈㴶</td><td>反對</td><td>傳教士勸人不祭祖，等於宣揚不孝，動搖傳統<strong>儒家倫理</strong>與社會秩序</td></tr>
+<tr><td>二</td><td>1616 明朝官員徐光啟</td><td>支持</td><td>與傳教士探究學術，知其品德端正；天主教與中國傳統道理相通，勸人為善；西方許多國家奉行天主教千年，國泰民安</td></tr>
+<tr><td>三</td><td>1692 清康熙皇帝（容教令）</td><td>容許</td><td>傳教士編訂曆法、協助製造軍器火炮，有功勞；且未違法作亂，故天主堂可保留</td></tr>
+<tr><td>四</td><td>1724 清雍正皇帝（口諭）</td><td>反對、禁教</td><td>當時傳教士人數不多，但康熙年間教堂到處設立、天主教迅速傳布，擔心人數增多後<strong>產生騷亂</strong></td></tr>
+</table></div>
+<p><strong>解題重點</strong></p>
+<ol>
+<li>資料一、二的辯論，最適合說明主題：<strong>天主教與中國傳統文化的衝突（與調和）</strong>。</li>
+<li>統治者認為傳教士的貢獻（資料三、四）：<strong>參與編訂曆法、協助製造軍火</strong>。</li>
+<li>對天主教保持疑慮的兩則：<strong>資料一（官員、儒家士人）與資料四（統治者）</strong>；前者擔心倫理，後者擔心社會秩序。</li>
+<li>《清史稿》記載與「清廷禁教導致中西交流中斷」的說法是否合適？不完全恰當：雍正禁教後仍保留北京一間教堂，欽天監仍使用西洋人至道光年間，可見清廷主要限制的是傳教，而非完全斷絕科技交流。</li>
+</ol>
+
+<h2>易混淆比較表與跨單元串連</h2>
+<p>段考最常考的是「相似概念辨析」與「同一現象跨時期比較」。</p>
+
+<h3>易混淆概念比較</h3>
+<div class="tw"><table>
+<tr><th>比較</th><th>A</th><th>B</th><th>記憶點</th></tr>
+<tr><td>澶淵之盟 vs. 朝貢體制</td><td>澶淵之盟：宋、遼<strong>平等</strong>外交（兄弟相稱）</td><td>朝貢體制：中國以「天朝」自居，要求周邊<strong>臣服、冊封</strong></td><td>平等 vs. 不平等</td></tr>
+<tr><td>靖康之禍 vs. 明亡</td><td>1127 金滅北宋，宋室南遷</td><td>1644 李自成攻陷北京、清兵入關</td><td>金：北宋；滿洲人：明</td></tr>
+<tr><td>交子 vs. 寶鈔</td><td>北宋紙幣</td><td>元代紙幣</td><td>交子先、寶鈔後</td></tr>
+<tr><td>漢人 vs. 南人（元四等人）</td><td>原金統治下的人</td><td>原南宋統治下的人</td><td>南人地位最低</td></tr>
+<tr><td>蒙古西征 vs. 元朝建立</td><td>鐵木真（成吉思汗），13世紀初建蒙古國、三次西征</td><td>忽必烈，建「大元」，1279滅南宋</td><td>鐵木真是忽必烈的祖父</td></tr>
+<tr><td>倭寇 vs. 海商</td><td>16世紀前稱日本海盜</td><td>16世紀後轉為以漢人為主，亦稱「海商」</td><td>同一群人，評價角度不同</td></tr>
+<tr><td>流寇 vs. 民變</td><td>流寇：統治者的稱呼（偏負面）</td><td>民變：中性稱呼</td><td>對同一事件的立場差異</td></tr>
+<tr><td>鎖國 vs. 海禁</td><td>日本，17世紀中期禁教、僅荷、中至長崎貿易</td><td>明朝，1371起防倭寇禁止民間出海</td><td>鎖國是日本，海禁是中國</td></tr>
+<tr><td>利瑪竇 vs. 禮儀之爭</td><td>利瑪竇：允許祭祖、傳播科學，明代</td><td>禮儀之爭：羅馬教會禁祭祖、祀孔，康熙晚期</td><td>先容、後爭</td></tr>
+</table></div>
+
+<h3>跨單元串連：同一主題，宋元 vs. 明清</h3>
+<div class="tw"><table>
+<tr><th>主題</th><th>宋元（單元3）</th><th>明清（單元4）</th></tr>
+<tr><td>統治族群</td><td>契丹、女真、蒙古等少數民族建政權</td><td>滿洲人建清朝，統治多民族帝國</td></tr>
+<tr><td>對漢人策略</td><td>元：四等人制，區別待遇</td><td>清：文字獄（高壓）＋科舉、薙髮令</td></tr>
+<tr><td>外交模式</td><td>澶淵之盟（平等）、蒙古帝國的國際新秩序</td><td>朝貢體制（天朝觀）</td></tr>
+<tr><td>商貿重點</td><td>市舶司、泉州廣州、紙幣</td><td>海禁、倭寇、白銀、世界商貿網絡、新作物</td></tr>
+<tr><td>文化交流</td><td>穆斯林商人與學者來華；傳入天文、數學；三大發明西傳</td><td>耶穌會傳教士來華；傳入數學、天文、地理、火炮；禮儀之爭、鎖國、蘭學</td></tr>
+<tr><td>貨幣</td><td>銅錢笨重 → 紙幣（交子、寶鈔）</td><td>紙幣貶值 → 白銀流入（世界貿易、新航路）</td></tr>
+</table></div>
+
+<h3>因果鏈（考「為什麼」時用）</h3>
+<ul>
+<li>北宋重文輕武、無險可守 → 無法制服遼金 → 簽澶淵之盟、最終靖康之禍。</li>
+<li>蒙古大帝國、驛站與航線 → 東西交通更便利 → 穆斯林學者、商人來華 → 文化交流。</li>
+<li>明初紙幣貶值、銀礦不足 → 需從海外取得白銀 → 歐洲人以日本、美洲白銀換瓷器絲綢 → 世界商貿網絡、經濟成長。</li>
+<li>耶穌會傳教士傳入科學、天主教與祭祖衝突 → 禮儀之爭 → 雍正禁教。</li>
+</ul>
+
+<h2>課本題目解答與模擬題</h2>
+<p>先核對課本「來挑戰」「實作練習」「牛刀小試」的答案，再做模擬題，最後對答案。有些答案來自照片中的勾選筆跡，其餘為根據課文推證，請對照課本確認。</p>
+
+<h3>課本題目解答</h3>
+<div class="tw"><table>
+<tr><th>頁碼</th><th>題目</th><th>答案</th></tr>
+<tr><td>P.107 來挑戰</td><td>文人所說「東京」為何處？「兵禍」為何事？</td><td>汴京；靖康之禍</td></tr>
+<tr><td>P.111 來挑戰</td><td>清明上河圖香料鋪的香料主要產地？可說明何種現象？</td><td>東南亞；海上商貿活動興盛</td></tr>
+<tr><td>P.112 實作練習 ①</td><td>「澶淵之盟」、兩國君主約為兄弟，對應哪張圖？</td><td>圖片一（遼與北宋並立）</td></tr>
+<tr><td>P.112 實作練習 ②</td><td>岳飛「靖康恥」指哪張圖？他是哪個政權的臣民？</td><td>圖片三（金滅北宋）；南宋</td></tr>
+<tr><td>P.115 牛刀小試 ①</td><td>作者藉珍珠討論的議題</td><td>蒙古帝國的貿易網絡</td></tr>
+<tr><td>P.115 牛刀小試 ②</td><td>穆斯林參與忽必烈遠征東南亞的原因</td><td>拓展商業網絡，藉以提升獲利</td></tr>
+<tr><td>P.118 想一想</td><td>「流寇」與「民變」稱呼的態度差異</td><td>流寇：視為盜賊、偏負面；民變：較中性、視為民眾反抗</td></tr>
+<tr><td>P.121 來挑戰（暹羅）</td><td>使節團前往中國的目的？皇帝更重視的面向？</td><td>與明朝建立朝貢關係；政治上的秩序（賞賜遠高於貢品，重在彰顯天朝、臣服態度）</td></tr>
+<tr><td>P.125 來挑戰</td><td>杉田玄白參考的外文著作的語言</td><td>荷蘭文</td></tr>
+<tr><td>P.126 實作練習</td><td>歐洲人以何物換中國瓷器</td><td>白銀</td></tr>
+<tr><td>P.127 牛刀小試</td><td>明清易代如何影響朝鮮對中國的看法</td><td>認為滿清是夷狄，自己才是中華文化繼承者</td></tr>
+<tr><td>P.129 議題探究</td><td>天主教與中國文化</td><td>見「議題探究」章節</td></tr>
+</table></div>
+
+<h3>模擬題（20 題選擇 + 3 題簡答）</h3>
+<p><strong>選擇題</strong></p>
+<ol>
+<li>宋、遼簽訂「澶淵之盟」的內容，下列何者正確？(A)宋向遼稱臣 (B)雙方君主以兄弟相稱 (C)遼每年輸銀給宋 (D)金共同滅遼</li>
+<li>「靖康之禍」指的是：(A)遼滅北宋 (B)金攻陷汴京、俘虜北宋皇帝 (C)元滅南宋 (D)蒙古第一次西征</li>
+<li>南宋定都於：(A)汴京 (B)臨安 (C)大都 (D)應天</li>
+<li>元朝四等人由高到低為：(A)蒙古人、色目人、漢人、南人 (B)蒙古人、漢人、色目人、南人 (C)色目人、蒙古人、南人、漢人 (D)蒙古人、色目人、南人、漢人</li>
+<li>宋元設於廣州、泉州等港口、負責管理海外貿易與徵稅的機構是：(A)驛站 (B)市舶司 (C)欽天監 (D)禮部</li>
+<li>關於宋元紙幣，何者正確？(A)寶鈔是北宋紙幣 (B)交子流通全國 (C)元代寶鈔由官方發行，可流通全國 (D)宋元都禁用紙幣</li>
+<li>理學的集大成者是誰？他的著作自元代起被定為科舉定本：(A)孔子、《論語》 (B)朱熹、《四書集注》 (C)孟子、《孟子》 (D)朱元璋、《大明律》</li>
+<li>火藥技術傳入阿拉伯世界的主要因素是：(A)鄭和下西洋 (B)蒙古西征 (C)明朝朝貢 (D)日本鎖國</li>
+<li>發明活字印刷的是：(A)蔡倫 (B)畢昇 (C)利瑪竇 (D)徐光啟</li>
+<li>明成祖為防備蒙古，將都城由應天遷至：(A)洛陽 (B)順天（北京） (C)汴京 (D)臨安</li>
+<li>清朝對漢人「高壓」的手段是：(A)科舉取士 (B)聯姻 (C)文字獄與薙髮留辮 (D)朝貢貿易</li>
+<li>關於「朝貢貿易」，何者正確？(A)平等的外交關係 (B)外國使節團在朝貢過程中可在官方監督下貿易 (C)禁止任何貿易 (D)只存在於宋代</li>
+<li>琉球成為「中日二屬」，起因於：(A)康熙統一臺灣 (B)17世紀初日本入侵琉球 (C)鄭和下西洋 (D)牡丹社事件</li>
+<li>明嘉靖年間，暹羅使節因象死亡取象牙、象尾獻給皇帝，稍後皇帝仍高額賞賜。這說明中國皇帝更重視：(A)經濟利益 (B)政治上的秩序 (C)軍事合作 (D)宗教傳播</li>
+<li>明初實施海禁的主要目的是：(A)防範倭寇 (B)推廣貿易 (C)發行紙幣 (D)傳播天主教</li>
+<li>16至18世紀，歐洲商人主要以下列何物換取中國的瓷器、絲綢：(A)白銀 (B)銅錢 (C)香料 (D)紙幣</li>
+<li>下列哪些作物原產於美洲、後促進東亞人口成長：(A)稻米、小麥 (B)番薯、玉米、馬鈴薯 (C)茶葉、絲綢 (D)棉花、麻</li>
+<li>利瑪竇為順利傳教採取的做法是：(A)禁止祭祖 (B)允許信徒祭祖拜孔、傳播西方科學知識 (C)反對儒家 (D)拒絕與士人交往</li>
+<li>「禮儀之爭」的起因是：(A)羅馬教會認為祭祖祈孔與教義衝突，禁止教徒為之 (B)清廷要求傳教士薙髮 (C)明朝實施海禁 (D)日本鎖國</li>
+<li>日本鎖國時期，僅允許其與長崎貿易的歐洲國家是：(A)葡萄牙 (B)西班牙 (C)荷蘭 (D)英國</li>
+</ol>
+<p><strong>簡答題</strong></p>
+<ul>
+<li>A：比較「澶淵之盟」與「朝貢體制」在外交關係上的差異。</li>
+<li>B：說明「白銀」如何連結明清時期的世界商貿網絡（至少寫出三個地區）。</li>
+<li>C：朝鮮使節見到清服、辮髮時，為何有「此不足以象徵中華文化」的想法？</li>
+</ul>
+
+<details>
+<summary>顯示答案與解析（先寫完再看）</summary>
+<div class="tw"><table>
+<tr><th>題號</th><th>答案</th><th>解析</th></tr>
+<tr><td>1</td><td>B</td><td>澶淵之盟：宋輸歲幣、兄弟相稱，平等外交（C錯：是宋輸遼）</td></tr>
+<tr><td>2</td><td>B</td><td>1127 金攻陷汴京</td></tr>
+<tr><td>3</td><td>B</td><td>臨安（今杭州）</td></tr>
+<tr><td>4</td><td>A</td><td>蒙古→色目→漢→南人</td></tr>
+<tr><td>5</td><td>B</td><td>市舶司類似現在海關</td></tr>
+<tr><td>6</td><td>C</td><td>寶鈔官方發行、全國通行</td></tr>
+<tr><td>7</td><td>B</td><td>朱熹、《四書集注》</td></tr>
+<tr><td>8</td><td>B</td><td>蒙古西征傳入阿拉伯</td></tr>
+<tr><td>9</td><td>B</td><td>北宋畢昇</td></tr>
+<tr><td>10</td><td>B</td><td>順天（北京）</td></tr>
+<tr><td>11</td><td>C</td><td>文字獄、薙髮留辮為高壓；科舉為懷柔</td></tr>
+<tr><td>12</td><td>B</td><td>朝貢貿易在官方監督下進行</td></tr>
+<tr><td>13</td><td>B</td><td>日本入侵琉球後</td></tr>
+<tr><td>14</td><td>B</td><td>賞賜遠高於貢品，重在彰顯天朝大度</td></tr>
+<tr><td>15</td><td>A</td><td>防倭寇</td></tr>
+<tr><td>16</td><td>A</td><td>以白銀換瓷器、絲綢</td></tr>
+<tr><td>17</td><td>B</td><td>番薯、玉米、馬鈴薯</td></tr>
+<tr><td>18</td><td>B</td><td>允許祭祖、傳播科學</td></tr>
+<tr><td>19</td><td>A</td><td>羅馬教會禁祭祖祈孔（康熙晚期）</td></tr>
+<tr><td>20</td><td>C</td><td>僅荷、中到長崎貿易</td></tr>
+<tr><td>A</td><td>—</td><td>澶淵之盟：平等、兄弟相稱；朝貢體制：中國以天朝自居、周邊接受冊封、朝貢，地位不平等</td></tr>
+<tr><td>B</td><td>—</td><td>日本、美洲白銀經歐洲商人流入中國，換取瓷器、絲綢；再送往歐洲、美洲，形成世界網絡</td></tr>
+<tr><td>C</td><td>—</td><td>辮髮、馬蹄袖被視為夷狄服飾；朝鮮認為明朝衣冠才是中華文化象徵，自視為「小中華」</td></tr>
+</table></div>
+</details>
+
+<p class="note" style="margin-top:2em">資料來源：國中八年級歷史課本（單元3、4，P.104–129）整理。照片文字較模糊處，請對照課本確認。</p>
+</main>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var KEY = 'hist8-m2-hl-v1';       // 內容大改時可改版本號，避免舊標註錯位
+  var PREF = 'hist8-m2-pref-v1';
+  var content = document.getElementById('content');
+  var BLOCK_SEL = 'h1,h2,h3,p,li,td,th,summary,blockquote';
+  var blocks = [];
+  var hl = {};                      // { blockIndex: [[start,end,color],...] }
+  var history = [];
+  var tool = null;                  // 'y','g','p','b','o','x'(橡皮擦) or null
+  var pref = {fs:17, dark:false};
+
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  function indexBlocks(){
+    var all = content.querySelectorAll(BLOCK_SEL);
+    blocks = [];
+    for (var i = 0; i < all.length; i++){
+      if (!all[i].querySelector(BLOCK_SEL)){ all[i].dataset.b = blocks.length; blocks.push(all[i]); }
+    }
+  }
+
+  function textNodes(el){
+    var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null), out = [], n;
+    while ((n = w.nextNode())) out.push(n);
+    return out;
+  }
+
+  function unwrapAll(){
+    var ms = content.querySelectorAll('mark.hl');
+    for (var i = 0; i < ms.length; i++){
+      var m = ms[i], p = m.parentNode;
+      while (m.firstChild) p.insertBefore(m.firstChild, m);
+      p.removeChild(m);
+      p.normalize();
+    }
+  }
+
+  function toRuns(ranges, len){
+    var arr = new Array(len), i, j;
+    for (i = 0; i < ranges.length; i++){
+      for (j = ranges[i][0]; j < ranges[i][1] && j < len; j++) arr[j] = ranges[i][2];
+    }
+    var runs = [], cur = null;
+    for (i = 0; i < len; i++){
+      if (arr[i] !== cur){
+        if (cur) runs[runs.length - 1][1] = i;
+        if (arr[i]) runs.push([i, len, arr[i]]);
+        cur = arr[i];
+      }
+    }
+    return runs;
+  }
+
+  function render(){
+    unwrapAll();
+    Object.keys(hl).forEach(function(k){
+      var el = blocks[+k]; if (!el) return;
+      var runs = hl[k]; if (!runs.length) return;
+      var pos = 0, nodes = textNodes(el);
+      nodes.forEach(function(tn){
+        var a = pos, b = pos + tn.nodeValue.length; pos = b;
+        var segs = [];
+        runs.forEach(function(r){
+          var s = Math.max(r[0], a), e = Math.min(r[1], b);
+          if (s < e) segs.push([s - a, e - a, r[2]]);
+        });
+        if (!segs.length) return;
+        var txt = tn.nodeValue, frag = document.createDocumentFragment(), last = 0;
+        segs.forEach(function(sg){
+          if (sg[0] > last) frag.appendChild(document.createTextNode(txt.slice(last, sg[0])));
+          var m = document.createElement('mark');
+          m.className = 'hl hl-' + sg[2];
+          m.textContent = txt.slice(sg[0], sg[1]);
+          frag.appendChild(m);
+          last = sg[1];
+        });
+        if (last < txt.length) frag.appendChild(document.createTextNode(txt.slice(last)));
+        tn.parentNode.replaceChild(frag, tn);
+      });
+    });
+  }
+
+  function offsetIn(el, node, off){
+    var r = document.createRange();
+    r.selectNodeContents(el);
+    r.setEnd(node, off);
+    return r.toString().length;
+  }
+
+  function applySelection(color){
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.rangeCount) return false;
+    var range = sel.getRangeAt(0);
+    if (!content.contains(range.commonAncestorContainer)) return false;
+    var snapshot = JSON.stringify(hl), changed = false;
+    blocks.forEach(function(el, idx){
+      if (!range.intersectsNode(el)) return;
+      var len = el.textContent.length, s = 0, e = len;
+      if (el.contains(range.startContainer)) s = offsetIn(el, range.startContainer, range.startOffset);
+      if (el.contains(range.endContainer)) e = offsetIn(el, range.endContainer, range.endOffset);
+      if (e <= s) return;
+      var cur = hl[idx] || [];
+      var arr = [];
+      cur.forEach(function(r){ arr.push(r.slice()); });
+      arr.push([s, e, color === 'x' ? null : color]);
+      var runs = toRuns(arr.map(function(r){ return r; }), len);
+      // toRuns 遇 null 會把後蓋前，達成擦除
+      if (runs.length) hl[idx] = runs; else delete hl[idx];
+      changed = true;
+    });
+    if (changed){
+      history.push(snapshot);
+      if (history.length > 50) history.shift();
+      save(KEY, hl);
+      sel.removeAllRanges();
+      render();
+    }
+    return changed;
+  }
+
+  function setTool(c){
+    tool = (tool === c) ? null : c;
+    document.body.classList.toggle('tool', !!tool);
+    document.querySelectorAll('.sw').forEach(function(b){ b.classList.toggle('on', b.dataset.c === tool); });
+    document.getElementById('eraser').classList.toggle('on', tool === 'x');
+    var hint = document.getElementById('hint');
+    hint.textContent = tool
+      ? (tool === 'x' ? '橡皮擦已開啟：選取已標註的文字即可擦除。' : '螢光筆已開啟：選取文字就會自動上色。再點一次同色可關閉。')
+      : '用法：先點一個顏色，再用滑鼠或手指選取文字，就會自動上色；再點一次同色可關閉。';
+  }
+
+  // toolbar：避免點擊按鈕時清除選取
+  var tb = document.getElementById('toolbar');
+  tb.addEventListener('mousedown', function(e){ if (e.target.closest('button')) e.preventDefault(); });
+  tb.addEventListener('touchstart', function(e){ if (e.target.closest('button')) e.preventDefault(); }, {passive:false});
+
+  document.querySelectorAll('.sw').forEach(function(b){
+    b.addEventListener('click', function(){
+      var had = applySelection(b.dataset.c);   // 若已有選取，直接套用
+      if (!had) setTool(b.dataset.c);
+      else if (tool !== b.dataset.c) setTool(b.dataset.c);
+    });
+  });
+  document.getElementById('eraser').addEventListener('click', function(){
+    var had = applySelection('x');
+    if (!had) setTool('x');
+  });
+
+  function autoApply(){
+    if (!tool) return;
+    setTimeout(function(){ applySelection(tool); }, 10);
+  }
+  content.addEventListener('mouseup', autoApply);
+  content.addEventListener('touchend', function(){ setTimeout(autoApply, 350); });
+
+  document.getElementById('undo').addEventListener('click', function(){
+    if (!history.length) return;
+    hl = JSON.parse(history.pop());
+    save(KEY, hl); render();
+  });
+  document.getElementById('clear').addEventListener('click', function(){
+    if (!Object.keys(hl).length) return;
+    if (!confirm('確定要清除所有標註嗎？')) return;
+    history.push(JSON.stringify(hl));
+    hl = {}; save(KEY, hl); render();
+  });
+  document.getElementById('export').addEventListener('click', function(){
+    var blob = new Blob([JSON.stringify({v:1, key:KEY, hl:hl})], {type:'application/json'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = 'history-highlights.json';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  var file = document.getElementById('file');
+  document.getElementById('import').addEventListener('click', function(){ file.click(); });
+  file.addEventListener('change', function(){
+    var f = file.files[0]; if (!f) return;
+    var rd = new FileReader();
+    rd.onload = function(){
+      try{
+        var d = JSON.parse(rd.result);
+        if (d && d.hl){ history.push(JSON.stringify(hl)); hl = d.hl; save(KEY, hl); render(); }
+      }catch(e){ alert('匯入失敗：檔案格式不正確'); }
+      file.value = '';
+    };
+    rd.readAsText(f);
+  });
+
+  // 字級、深色
+  function applyPref(){
+    document.documentElement.style.setProperty('--fs', pref.fs + 'px');
+    document.body.classList.toggle('dark', pref.dark);
+    document.getElementById('dark').textContent = pref.dark ? '淺色' : '深色';
+    save(PREF, pref);
+  }
+  document.getElementById('fminus').addEventListener('click', function(){ pref.fs = Math.max(13, pref.fs - 1); applyPref(); });
+  document.getElementById('fplus').addEventListener('click', function(){ pref.fs = Math.min(26, pref.fs + 1); applyPref(); });
+  document.getElementById('dark').addEventListener('click', function(){ pref.dark = !pref.dark; applyPref(); });
+
+  // 目錄
+  function buildToc(){
+    var toc = document.getElementById('toc');
+    content.querySelectorAll('h2').forEach(function(h, i){
+      h.id = 'sec' + i;
+      var a = document.createElement('a');
+      a.href = '#sec' + i; a.textContent = h.textContent;
+      toc.appendChild(a);
+    });
+  }
+
+  // init
+  pref = Object.assign(pref, load(PREF, {}));
+  indexBlocks();
+  buildToc();
+  hl = load(KEY, {});
+  applyPref();
+  render();
+})();
+</script>
+</body>
+</html>
