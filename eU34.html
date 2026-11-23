@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>國二英文第二次段考重點總複習筆記</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --secondary: #0d9488;
+            --secondary-light: #f0fdfa;
+            --accent: #d97706;
+            --accent-light: #fffbeb;
+            --danger: #dc2626;
+            --danger-light: #fef2f2;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.25);
+        }
+
+        header .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        header h1 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #dbeafe;
+            font-size: 0.95rem;
+        }
+
+        .video-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+
+        .video-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            color: #1e3a8a;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .video-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2.5rem 0 1.25rem;
+        }
+
+        .section-divider span {
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            padding: 0.35rem 1rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .section-divider.part2 span {
+            background: var(--secondary);
+        }
+
+        .section-divider::after {
+            content: "";
+            height: 2px;
+            background: var(--border);
+            flex: 1;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--bg);
+            padding-bottom: 0.85rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .formula-box {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        .formula-box.teal {
+            background: var(--secondary-light);
+            border-left-color: var(--secondary);
+            color: #115e59;
+        }
+
+        code {
+            background: #f1f5f9;
+            color: #be123c;
+            padding: 0.15rem 0.45rem;
+            border-radius: 5px;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.92em;
+            font-weight: 600;
+        }
+
+        ul {
+            padding-left: 1.35rem;
+            margin: 0.75rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .callout {
+            border-radius: 10px;
+            padding: 1.1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+
+        .callout-danger {
+            background: var(--danger-light);
+            border: 1px solid #fecaca;
+            border-left: 4px solid var(--danger);
+        }
+
+        .callout-danger .callout-title {
+            color: var(--danger);
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .callout-warning {
+            background: var(--accent-light);
+            border: 1px solid #fde68a;
+            border-left: 4px solid var(--accent);
+        }
+
+        .callout-warning .callout-title {
+            color: #b45309;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .example-line {
+            background: #f8fafc;
+            padding: 0.65rem 1rem;
+            border-radius: 8px;
+            margin-top: 0.6rem;
+            border: 1px dashed #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        .time-examples-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.85rem;
+            margin-top: 0.85rem;
+        }
+
+        .time-ex-card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 0.9rem 1.1rem;
+        }
+
+        .time-ex-card .ex-tag {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.15rem 0.55rem;
+            border-radius: 6px;
+            margin-bottom: 0.4rem;
+        }
+
+        .time-ex-card.warning-tag .ex-tag {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .time-ex-item {
+            margin-top: 0.45rem;
+            font-size: 0.92rem;
+            padding-bottom: 0.45rem;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .time-ex-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .time-ex-zh {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        th {
+            background: #f1f5f9;
+            color: #0f172a;
+            font-weight: 700;
+            text-align: left;
+            padding: 0.85rem 1rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #fafbfc;
+        }
+
+        .verb-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.65rem;
+            margin: 1rem 0;
+        }
+
+        .verb-chip {
+            background: var(--secondary-light);
+            border: 1px solid #99f6e4;
+            border-radius: 8px;
+            padding: 0.55rem 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.92rem;
+        }
+
+        .verb-chip strong {
+            color: #0f766e;
+            font-family: monospace;
+            font-size: 1rem;
+        }
+
+        .trap-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 0.75rem;
+        }
+
+        @media (max-width: 680px) {
+            .trap-grid, .time-examples-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 1.75rem 1.25rem;
+            }
+            .card {
+                padding: 1.25rem;
+            }
+        }
+
+        .trap-box {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1rem 1.15rem;
+        }
+
+        .trap-box h4 {
+            font-size: 0.95rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .correct {
+            color: #15803d;
+            font-weight: 700;
+        }
+
+        .wrong {
+            color: #b91c1c;
+            text-decoration: line-through;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">群英小教室 • 國二英文段考衝刺</div>
+            <h1>國二英文第二次段考重點總複習（上＋下）</h1>
+            <p>主講：Karen 老師 ｜ 涵蓋「過去進行式」、「時間逆讀法」、「動名詞 / 不定詞 / 虛主詞 It」三大核心考點</p>
+            <div class="video-links">
+                <a href="http://www.youtube.com/watch?v=CkeK8r4c45w" target="_blank" class="video-btn">▶ 觀看重點整理（上）</a>
+                <a href="http://www.youtube.com/watch?v=0o308s6zYTY" target="_blank" class="video-btn">▶ 觀看重點整理（下）</a>
+            </div>
+        </header>
+
+        <!-- 上集內容 -->
+        <div class="section-divider">
+            <span>第一部分：段考重點（上）</span>
+        </div>
+
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">📌 重點一：過去進行式</h2>
+            </div>
+            <p><strong>核心觀念：</strong>強調「在過去的某個特定時間點」正在持續進行的動作。</p>
+            
+            <div class="formula-box">
+                基本句型：主詞 (S) + was / were + V-ing
+                <div style="font-size: 0.88rem; font-weight: 400; margin-top: 0.25rem; color: #334155;">
+                    ※ 單數主詞及 I 搭配 <code>was</code>；複數主詞及 you 搭配 <code>were</code>。
+                </div>
+            </div>
+
+            <ul>
+                <li><strong>明確過去時間點：</strong>例如 <code>at 3 p.m. yesterday</code>（昨天下午三點時）。</li>
+                <li><strong>代稱當時：</strong><code>then</code> / <code>at that time</code>（那時候）。</li>
+                <li><strong>搭配過去式瞬間動詞：</strong><code>when + 過去式瞬間動詞 (V-ed)</code>，常見如 <code>called</code>（打電話來）、<code>rang</code>（鈴響）、<code>arrived</code>（抵達）、<code>came home / got home</code>（到家）、<code>happened</code>（發生）。</li>
+            </ul>
+
+            <div class="callout callout-danger">
+                <div class="callout-title">⚠️ 段考大陷阱：when vs. while</div>
+                <p>當句子中的<strong>「兩件事情同時都在進行」</strong>時（前後子句皆為 <code>beV + V-ing</code>），連接詞<strong>絕對不能用 <code>when</code>，必須使用 <code>while</code></strong>。</p>
+                <div class="example-line">
+                    <strong>例句：</strong>Karen <code>was watching</code> a movie <strong>while</strong> I <code>was studying</code>.<br>
+                    <span style="color: var(--text-muted); font-size: 0.88rem;">（當 Karen 正在看電影時，我正在讀書。）</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">⏰ 重點二：時間的「逆讀法」</h2>
+            </div>
+            <div class="formula-box">
+                基本公式：分 + 介系詞 + 時（先講分鐘，再講小時）
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 22%;">分鐘範圍</th>
+                        <th style="width: 34%;">規則與公式</th>
+                        <th>說明與範例</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1 ～ 29 分</strong></td>
+                        <td><code>分 + past / after + 時</code></td>
+                        <td>表示「幾點<strong>過了</strong>幾分」。</td>
+                    </tr>
+                    <tr>
+                        <td><strong>30 分</strong></td>
+                        <td><code>half + past + 時</code></td>
+                        <td>30 分須轉換為 <code>half</code>（一半），語用上習慣搭配 <code>past</code>（極少用 <code>after</code>）。</td>
+                    </tr>
+                    <tr>
+                        <td><strong>31 ～ 59 分</strong></td>
+                        <td><code>(60 - 分) + to + (時 + 1)</code></td>
+                        <td>逆讀法的分鐘數不能超過 29，須轉換為「<strong>再幾分就到下一個整點</strong>」。<br>
+                        • <strong>範例 <code>1:58</code></strong>：距離 2 點還差 2 分鐘 → <code>two to two</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 1.4rem; margin-bottom: 0.4rem; font-size: 1.05rem; color: #1e3a8a;">📝 各規則實戰例句</h3>
+            <div class="time-examples-grid">
+                <div class="time-ex-card">
+                    <span class="ex-tag">1 ～ 29 分（past / after）</span>
+                    <div class="time-ex-item">
+                        <strong>03:10</strong> → <code>ten past three</code><br>
+                        The train leaves at <strong>ten past three</strong>.
+                        <span class="time-ex-zh">（火車在三點十分出發。）</span>
+                    </div>
+                    <div class="time-ex-item">
+                        <strong>08:20</strong> → <code>twenty after eight</code><br>
+                        We usually start our first class at <strong>twenty after eight</strong>.
+                        <span class="time-ex-zh">（我們通常在八點二十分開始第一堂課。）</span>
+                    </div>
+                </div>
+
+                <div class="time-ex-card">
+                    <span class="ex-tag">30 分（half past）</span>
+                    <div class="time-ex-item">
+                        <strong>06:30</strong> → <code>half past six</code><br>
+                        My father gets up at <strong>half past six</strong> every morning.
+                        <span class="time-ex-zh">（我爸爸每天早上六點半起床。）</span>
+                    </div>
+                    <div class="time-ex-item">
+                        <strong>11:30</strong> → <code>half past eleven</code><br>
+                        It is <strong>half past eleven</strong> now. Let's have lunch.
+                        <span class="time-ex-zh">（現在十一點半了。我們去吃午餐吧。）</span>
+                    </div>
+                </div>
+
+                <div class="time-ex-card">
+                    <span class="ex-tag">31 ～ 59 分（to + 下一整點）</span>
+                    <div class="time-ex-item">
+                        <strong>04:50</strong> → <code>ten to five</code><br>
+                        The library closes at <strong>ten to five</strong> in the afternoon.
+                        <span class="time-ex-zh">（圖書館在下午四點五十分閉館。）</span>
+                    </div>
+                    <div class="time-ex-item">
+                        <strong>09:40</strong> → <code>twenty to ten</code><br>
+                        Hurry up! It's already <strong>twenty to ten</strong>.
+                        <span class="time-ex-zh">（快點！已經九點四十分了。）</span>
+                    </div>
+                </div>
+
+                <div class="time-ex-card warning-tag">
+                    <span class="ex-tag">特殊代換：15 分 / 45 分（a quarter）</span>
+                    <div class="time-ex-item">
+                        <strong>07:15</strong> → <code>a quarter past seven</code><br>
+                        She arrived at school at <strong>a quarter past seven</strong>.
+                        <span class="time-ex-zh">（她在七點十五分抵達學校。）</span>
+                    </div>
+                    <div class="time-ex-item">
+                        <strong>02:45</strong> → <code>a quarter to three</code><br>
+                        The movie will begin at <strong>a quarter to three</strong>.
+                        <span class="time-ex-zh">（電影將在兩點四十五分開始。）</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout callout-warning">
+                <div class="callout-title">💡 特殊分數代換提醒（15 分與 45 分）</div>
+                <p>60 分鐘的四分之一為 15 分鐘，考試時遇到 <code>15 分</code> 或 <code>45 分</code> <strong>不能直接寫 <code>fifteen</code> 或 <code>forty-five</code></strong>，必須改寫成 <strong><code>a quarter</code></strong>（再依情況搭配 <code>past</code> 或 <code>to</code>）。</p>
+            </div>
+        </section>
+
+        <!-- 下集內容 -->
+        <div class="section-divider part2">
+            <span>第二部分：段考重點（下）</span>
+        </div>
+
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">🔤 重點三：動名詞 (V-ing)、不定詞 (to V) 與虛主詞 It</h2>
+            </div>
+            <p><strong>基本原則：</strong>一個英文句子只能有一個主要動詞；若要接第二個動作，必須將其改裝為動名詞（<code>V-ing</code>）或不定詞（<code>to V</code>）。</p>
+
+            <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: #0f766e;">1. 必背！後方只能接 V-ing 當受詞的動詞</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">老師口訣整理（看到這些動詞在前方，後方動作一律改為 <code>V-ing</code>，例如：<code>I enjoy singing.</code>）：</p>
+            
+            <div class="verb-grid">
+                <div class="verb-chip"><strong>quit</strong><span>戒除</span></div>
+                <div class="verb-chip"><strong>finish</strong><span>完成</span></div>
+                <div class="verb-chip"><strong>feel like</strong><span>想要</span></div>
+                <div class="verb-chip"><strong>avoid</strong><span>避免</span></div>
+                <div class="verb-chip"><strong>practice</strong><span>練習</span></div>
+                <div class="verb-chip"><strong>keep</strong><span>保持</span></div>
+                <div class="verb-chip"><strong>mind</strong><span>介意</span></div>
+                <div class="verb-chip"><strong>enjoy</strong><span>享受</span></div>
+                <div class="verb-chip"><strong>give up</strong><span>放棄</span></div>
+            </div>
+
+            <h3 style="margin-top: 1.75rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: #0f766e;">2. 動名詞 / 不定詞當「主詞」與「虛主詞 It」</h3>
+            <ul>
+                <li><strong>當主詞（視為單數）：</strong>動作擺在句首當主詞時，需改為 <code>V-ing</code> 或 <code>to V</code>，且「做某件事」視為單數，後方接單數動詞（如 <code>is</code>）。<br>
+                → <code>Getting up early is hard.</code> / <code>To get up early is hard.</code>（早起是很難的。）</li>
+                <li><strong>虛主詞 It 句型：</strong>當主詞太長時，會用虛主詞 <code>It</code> 放在句首代替，將真正的主詞移到句尾。</li>
+            </ul>
+
+            <div class="callout callout-danger">
+                <div class="callout-title">⚠️ 虛主詞 It 必考禁忌</div>
+                <p>虛主詞 <code>It</code> 移到後面的真主詞<strong>只能用不定詞 <code>to V</code>，絕不能用 <code>V-ing</code></strong>！</p>
+                <div class="example-line">
+                    <span class="correct">✔ 正確：It is hard to get up early.</span><br>
+                    <span class="wrong">✘ 錯誤：It is hard getting up early.</span>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 1.75rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: #0f766e;">3. 段考兩大常見陷阱題辨析</h3>
+            
+            <div class="trap-grid">
+                <div class="trap-box">
+                    <h4>陷阱一：動名詞主詞 vs. 祈使句</h4>
+                    <p style="font-size: 0.92rem; margin-bottom: 0.5rem;">
+                        <strong>題目 A：</strong><code>____ up early is hard.</code><br>
+                        句中已有主要動詞 <code>is</code>，前方缺主詞，應填 <span class="correct">Getting / To get</span>。
+                    </p>
+                    <p style="font-size: 0.92rem;">
+                        <strong>題目 B：</strong><code>____ up early, or you will be late.</code><br>
+                        連接詞 <code>or</code>（否則）連接兩個完整句子，前方為省略主詞 <code>You</code> 的祈使句，應填原形動詞 <span class="correct">Get</span>。
+                    </p>
+                </div>
+
+                <div class="trap-box">
+                    <h4>陷阱二：動名詞片語 vs. 複合名詞</h4>
+                    <p style="font-size: 0.92rem; margin-bottom: 0.5rem;">
+                        <strong>題目 A：</strong><code>Spelling words ____ hard for me.</code><br>
+                        主詞是「拼字（<code>Spelling words</code>）這件事」，<code>words</code> 只是受詞，視為單數，動詞選 <span class="correct">is</span>。
+                    </p>
+                    <p style="font-size: 0.92rem;">
+                        <strong>題目 B：</strong><code>Spelling classes ____ hard for me.</code><br>
+                        <code>Spelling</code> 在此當形容詞修飾後方的 <code>classes</code>（拼字課程），真正主詞為複數名詞 <code>classes</code>，動詞選 <span class="correct">are</span>。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            整理自「群英小教室」國二英文第二次段考重點複習影片 • 祝段考順利！
+        </footer>
+    </div>
+</body>
+</html>
